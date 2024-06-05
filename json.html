@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display JSON Data</title>
+</head>
+<body>
+    <pre id="json-data"></pre>
+
+    <script>
+        // ข้อมูล JSON ที่ต้องการแสดง
+        var jsonData = {
+            "sender": {
+                "name": "panuwantung",
+                "address": "เลขที 569 หมู่ 5, ตําบลเวียง, อําเภอพร้าว, จังหวัดเชียงใหม่ 50190"
+            },
+            "recipient": {
+                "name": "เบญจวรรณ แก้วนันไชย",
+                "address": "เลขที่ 10 บ1 หมู่ 3, ต๊าบลลอ, อําเภอจุน, จังหวัดพะเยา 56150"
+            },
+            "shopee_order_no": "2405112JSDVK9R",
+            "product_option": "อุปกรณ์สตรีมเมอร์ Avermedia 0๐311 พร้อมชุดหัวแปลงไอโฟน        หัวแปลง HDMI เรพอพซิ,ขาว",
+            "misspelled_words_count": 7
+        };
+
+        // แสดงข้อมูล JSON ใน pre element
+        document.getElementById("json-data").textContent = JSON.stringify(jsonData, null, 2);
+    </script>
+</body>
+</html>
